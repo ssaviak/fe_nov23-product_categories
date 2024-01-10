@@ -40,6 +40,7 @@ export const App = () => {
             <div className="panel-block">
               <p className="control has-icons-left has-icons-right">
                 <input
+                  id="searchID"
                   data-cy="SearchField"
                   type="search"
                   className="input"
@@ -59,7 +60,9 @@ export const App = () => {
                         data-cy="ClearButton"
                         type="button"
                         className="delete"
-                        onClick={() => setInputField('')}
+                        onClick={() => {
+                          document.getElementById('searchID').value = '';
+                        }}
                       />
                     </span>
                   )
