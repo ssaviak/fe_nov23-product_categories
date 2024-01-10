@@ -62,6 +62,7 @@ export const App = () => {
                         className="delete"
                         onClick={() => {
                           document.getElementById('searchID').value = '';
+                          setInputField('');
                         }}
                       />
                     </span>
